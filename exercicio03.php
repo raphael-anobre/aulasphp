@@ -16,18 +16,22 @@
     <?php
 
     $salario = 1200;
-    if ($salario < 1500){
+    if ($salario < 1500) {
         $novoSalario = $salario * 1.15;
-    } elseif ($salario <= 3000){
+    } elseif ($salario <= 3000) {
         $novoSalario = $salario * 1.10;
     } else {
         $novoSalario = $salario * 1.05;
     }
 
     ?>
-    <p>Salário antigo: <?= $salario?></p>
-    <p>Salário novo: <?= $novoSalario?></p>
-         
+    <p>Salário antigo: R$
+        <?= number_format($salario, 2, ",", ".") ?>
+    </p>
+    <p>Salário novo: R$
+        <?= number_format($novoSalario, 2, ",", ".") ?>
+    </p>
+
 
 </body>
 
